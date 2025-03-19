@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document HA</title>
+    <style>
+      h2,
+      h3 {
+        margin-left: 10px;
+      }
+      .box {
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid black;
+      }
+      .box span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+      }
+      .green {
+        background-color: green;
+      }
+      .red {
+        background-color: red;
+      }
+      .purple {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Change background-color</p>
+    <p>Mouse click</p>
+    <div class="box green" onclick="changeColor('green')">
+      <span>Xanh</span>
+    </div>
+    <div class="box red" onclick="changeColor('red')"><span>Đỏ</span></div>
+    <div class="box purple" onclick="changeColor('purple')">
+      <span>Tím</span>
+    </div>
+    <script>
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
