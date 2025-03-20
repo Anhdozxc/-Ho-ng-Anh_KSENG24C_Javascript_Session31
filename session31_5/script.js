@@ -7,16 +7,17 @@ let employees = [
 ];
 
 let tableBody = document.querySelector("#employeeTable tbody");
+let tableContent = "";
 
 employees.forEach(function (employee) {
-  let row = document.createElement("tr");
-
-  row.innerHTML = `
-        <td>${employee.id}</td>
-        <td>${employee.name}</td>
-        <td>${employee.age}</td>
-        <td>${employee.address}</td>
-    `;
-
-  tableBody.appendChild(row);
+  tableContent += `
+    <tr>
+      <td>${employee.id}</td>
+      <td>${employee.name}</td>
+      <td>${employee.age}</td>
+      <td>${employee.address}</td>
+    </tr>
+  `;
 });
+
+tableBody.innerHTML = tableContent;
